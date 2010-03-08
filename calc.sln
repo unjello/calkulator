@@ -1,0 +1,48 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "calc", "calc.vcproj", "{CEA7D1CF-134B-4E2C-BAA0-4C81413C6619}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "core", "core.vcproj", "{1ECD1931-1CAD-4A58-89A1-5CD538F0B65B}"
+EndProject
+Global
+	GlobalSection(DevPartner Solution Properties) = postSolution
+	EndGlobalSection
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+		{CEA7D1CF-134B-4E2C-BAA0-4C81413C6619}.0 = {1ECD1931-1CAD-4A58-89A1-5CD538F0B65B}
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{CEA7D1CF-134B-4E2C-BAA0-4C81413C6619}.Debug.ActiveCfg = Debug|Win32
+		{CEA7D1CF-134B-4E2C-BAA0-4C81413C6619}.Debug.Build.0 = Debug|Win32
+		{CEA7D1CF-134B-4E2C-BAA0-4C81413C6619}.Release.ActiveCfg = Release|Win32
+		{CEA7D1CF-134B-4E2C-BAA0-4C81413C6619}.Release.Build.0 = Release|Win32
+		{1ECD1931-1CAD-4A58-89A1-5CD538F0B65B}.Debug.ActiveCfg = Debug|Win32
+		{1ECD1931-1CAD-4A58-89A1-5CD538F0B65B}.Debug.Build.0 = Debug|Win32
+		{1ECD1931-1CAD-4A58-89A1-5CD538F0B65B}.Release.ActiveCfg = Release|Win32
+		{1ECD1931-1CAD-4A58-89A1-5CD538F0B65B}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+	GlobalSection(DevPartner) = postSolution
+	EndGlobalSection
+	GlobalSection(DevPartner) = postSolution
+	EndGlobalSection
+	GlobalSection(DevPartner) = postSolution
+	EndGlobalSection
+	GlobalSection(DevPartner) = postSolution
+	EndGlobalSection
+	GlobalSection(DevPartner) = postSolution
+	EndGlobalSection
+	GlobalSection(DevPartner) = postSolution
+	EndGlobalSection
+	GlobalSection(DevPartner) = postSolution
+	EndGlobalSection
+	GlobalSection(DevPartner) = postSolution
+	EndGlobalSection
+	GlobalSection(DevPartner) = postSolution
+	EndGlobalSection
+EndGlobal
