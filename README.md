@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/unjello/calkulator.svg?branch=master)](https://travis-ci.org/unjello/calkulator)
+[![Build Status](https://travis-ci.org/unjello/calkulator.svg?branch=develop)](https://travis-ci.org/unjello/calkulator)
+
                                                  …
                           .                      :
               ____________ð >>>  ______   _ __ _ ð  __    _______
