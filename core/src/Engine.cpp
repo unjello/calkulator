@@ -25,7 +25,7 @@ std::ofstream file("debug.txt");
 #	define BOOST_SPIRIT_DEBUG_OUT file
 #endif
 
-#include <boost/spirit/core.hpp>
+/*#include <boost/spirit/core.hpp>
 #include <boost/spirit/utility/functor_parser.hpp>
 #include <boost/spirit/attribute.hpp>
 #include <boost/spirit/symbols.hpp>
@@ -40,15 +40,15 @@ std::ofstream file("debug.txt");
 using namespace boost;
 using namespace boost::spirit;
 using namespace phoenix;
-
+*/
 typedef unsigned long DWORD;
 
 
-#include "Engine.h"
-#include "Token.h"
+#include <core/Engine.h>
+/*#include "Token.h"
 #include "Actions.h"
 #include "Parsers.h"
-#include "Grammar.h"
+#include "Grammar.h"*/
 
 
 Value_t Calculate(const char* first) {
@@ -58,10 +58,10 @@ Value_t Calculate(const char* first) {
 	file<<endl<<"-=*=-=*=-=*=-=*=-=*=-=*=-=*=-=*=-=*=-=*=-=*=-=*=-=*=-=*=-=*=-=*=-"<<endl;
 #endif
 
-	varible_p.remove_all();
+	/*varible_p.remove_all();
 	varible_p.init();
 	if(!parse(first,Calculator[var(ret)=arg1],space_p).full)
 		throw runtime_error("not fully parsed");
-
+*/
 	return ret;
 }
