@@ -1,6 +1,19 @@
 language: cpp
+dist: trusty
 compiler:
   - clang
   - gcc
 script:
   - mkdir build && cd build && cmake .. && cmake --build .
+addons:
+    apt:
+        sources:
+            - llvm-toolchain-trusty
+            - ubuntu-toolchain-r-test
+            - george-edison55
+        packages:
+            - clang-4.0
+            - g++-6
+            - gcc-6
+            - cmake
+            - cmake-data
