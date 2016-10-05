@@ -22,3 +22,9 @@ if(BUILD_SHARED_LIBS)
  target_compile_definitions(core_lib PRIVATE CORE_EXPORTS)
  target_compile_definitions(core_lib INTERFACE CORE_IMPORTS)
 endif()
+
+add_executable(core_test test/CoreLibTest.cpp test/EngineTest.cpp)
+target_link_libraries(core_test Catch)
+target_link_libraries(core_test core_lib)
+
+add_test(NAME CoreTest COMMAND core_test)
