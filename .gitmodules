@@ -1,3 +1,6 @@
 [submodule "contrib/Catch"]
 	path = contrib/Catch
 	url = https://github.com/philsquared/Catch.git
+[submodule "contrib/spdlog"]
+	path = contrib/spdlog
+	url = https://github.com/gabime/spdlog.git
