@@ -1,5 +1,7 @@
-cmake_minimum_required(VERSION 3.2)
+cmake_minimum_required(VERSION 3.3)
 project(core CXX)
+
+add_compile_options($<$<COMPILE_LANGUAGE:CXX>:-std=c++17>)
 
 add_library(core_lib
   include/core/Engine.h
