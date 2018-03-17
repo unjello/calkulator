@@ -1,21 +1,8 @@
-/*
-* calculator "engine" :)
-*
-* calculator
-* (c) 2003 andrzej lichnerowicz. all rights reserved.
-* 
-* permission to copy, use, modify, sell and distribute this software 
-* is granted provided this copyright notice appears in all copies. 
-* this software is provided "as is" without express or implied warranty, 
-* and with no claim as to its suitability for any purpose.
-*
-* Changeslog:
-* 14 Mar 2003	AL	* moved as dll
-*					+ dll export/import guards
-* 08 Mar 2003	AL	- initial revision
-*
-*/
+// andrzej lichnerowicz, unlicensed (~public domain)
 #pragma once
+
+#include <string>
+
 
 #if defined(_WIN32)
 #   if defined(CORE_EXPORTS)
@@ -27,9 +14,19 @@
 #   define CORE_API
 #endif
 
-typedef double Value_t;
+namespace _0xaL::calkulator::core {
+    struct Boxed_Value {
+        long double real;
+        long long dec;
+        long long hex;
+        long long oct;
+        std::string bin;
 
-const Value_t pi = 3.141592653;
-const Value_t euler  = 2.718281828;
+        Boxed_Value() : real(0.0), dec(0), hex(0), oct(0), bin("0") {}
+    };
 
-CORE_API Value_t Calculate(const char* first);
+    class Calkulator {
+    public:
+        Boxed_Value const eval(const char* first) const;
+    };
+}
