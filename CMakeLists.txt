@@ -10,3 +10,4 @@ add_library(SpdLog INTERFACE)
 target_include_directories(SpdLog INTERFACE contrib/spdlog/include)
 
 add_subdirectory(core)
+add_subdirectory(app)

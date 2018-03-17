@@ -5,10 +5,6 @@ add_compile_options($<$<COMPILE_LANGUAGE:CXX>:-std=c++17>)
 
 add_library(core_lib
   include/core/Engine.h
-  src/Actions.h
-  src/Grammar.h
-  src/Parsers.h
-  src/Token.h
   src/Engine.cpp
   )
 
@@ -19,6 +15,7 @@ endif()
 
 target_include_directories(core_lib PUBLIC include)
 target_include_directories(core_lib PRIVATE src)
+target_link_libraries(core_lib SpdLog)
 
 if(BUILD_SHARED_LIBS)
  target_compile_definitions(core_lib PRIVATE CORE_EXPORTS)
