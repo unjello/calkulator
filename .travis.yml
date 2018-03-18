@@ -43,7 +43,7 @@ matrix:
         - MATRIX_EVAL="CC=clang-6.0 && CXX=clang++-6.0"
 
 before_install:
-    - eval "${MATRIX_EVAL}"
+  - eval "${MATRIX_EVAL}"
 
 install:
   - wget --no-verbose --output-document=boost-trunk.tar.bz2 http://sourceforge.net/projects/boost/files/boost/1.61.0/boost_1_61_0.tar.bz2/download
