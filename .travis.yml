@@ -2,21 +2,17 @@ language: cpp
 sudo: required
 dist: trusty
 
-compiler:
-  - clang
-  - gcc
-
 branches:
   only:
     - master
     - develop
     - /^hotfix-.*$/
     - /^release-.*$/
-
+    
 matrix:
   include:
     - os: linux
-      env: COMPILER_NAME=gcc CXX=g++-7 CC=gcc-7
+      env: MATRIX_EVAL="COMPILER_NAME=gcc && CXX=g++-7 && CC=gcc-7"
       addons:
         apt:
           sources:
@@ -27,7 +23,7 @@ matrix:
             - cmake-data
             - cmake
     - os: linux
-      env: COMPILER_NAME=clang CXX=clang++-6.0 CC=clang-6.0
+      env: MATRIX_EVAL="COMPILER_NAME=clang && CXX=clang++-6.0 && CC=clang-6.0"
       addons:
         apt:
           sources:
@@ -38,6 +34,9 @@ matrix:
             - clang-6.0
             - cmake-data
             - cmake
+
+before_install:
+  - eval "${MATRIX_EVAL}"
 
 install:
   - wget --no-verbose --output-document=boost-trunk.tar.bz2 http://sourceforge.net/projects/boost/files/boost/1.61.0/boost_1_61_0.tar.bz2/download
