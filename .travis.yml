@@ -13,37 +13,31 @@ branches:
     - /^hotfix-.*$/
     - /^release-.*$/
 
-addons:
-  apt:
-    sources:
-      - george-edison55-precise-backports
-    packages:
-      - cmake-data
-      - cmake
-
 matrix:
   include:
-   - os: linux
+    - os: linux
+      env: COMPILER_NAME=gcc CXX=g++-7 CC=gcc-7
       addons:
         apt:
           sources:
             - ubuntu-toolchain-r-test
+            - george-edison55-precise-backports
           packages:
             - g++-7
-      env:
-        - MATRIX_EVAL="CC=gcc-7 && CXX=g++-7"
+            - cmake-data
+            - cmake
     - os: linux
+      env: COMPILER_NAME=clang CXX=clang++-6.0 CC=clang-6.0
       addons:
         apt:
           sources:
+            - ubuntu-toolchain-r-test
             - llvm-toolchain-trusty-6.0
+            - george-edison55-precise-backports
           packages:
             - clang-6.0
-      env:
-        - MATRIX_EVAL="CC=clang-6.0 && CXX=clang++-6.0"
-
-before_install:
-  - eval "${MATRIX_EVAL}"
+            - cmake-data
+            - cmake
 
 install:
   - wget --no-verbose --output-document=boost-trunk.tar.bz2 http://sourceforge.net/projects/boost/files/boost/1.61.0/boost_1_61_0.tar.bz2/download
