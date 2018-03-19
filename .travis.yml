@@ -41,7 +41,7 @@ before_install:
 install:
   - pip install requests[security] --user
   - pip install conan --user
-  - sed -i.bak -e 's/"3.3", "3.4", "3.5", "3.6", "3.7", "3.8", "3.9", "4.0", "5.0"/"3.3", "3.4", "3.5", "3.6", "3.7", "3.8", "3.9", "4.0", "5.0", "6.0"/' ~/.conan/settings.yml
+  - mkdir -p ~/.conan && cp settings.yml ~/.conan/settings.yml
   - conan remote add bincrafters https://api.bintray.com/conan/bincrafters/public-conan
   - conan install . --build missing
 
