@@ -39,8 +39,8 @@ before_install:
   - eval "${MATRIX_EVAL}"
 
 install:
-  - pip install requests[security]
-  - pip install conan
+  - pip install requests[security] --user
+  - pip install conan --user
   - conan install . -build missing
 
 script:
