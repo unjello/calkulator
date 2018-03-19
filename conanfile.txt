@@ -1,0 +1,7 @@
+[requires]
+spdlog/0.16.3@bincrafters/stable
+boost_multiprecision/1.66.0@bincrafters/stable
+Catch/1.9.6@bincrafters/stable
+
+[generators]
+cmake
