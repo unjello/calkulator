@@ -3,6 +3,9 @@ project(calkulator)
 
 enable_testing()
 
+include(conanbuildinfo.cmake)
+conan_basic_setup()
+
 add_library(Catch INTERFACE)
 target_include_directories(Catch INTERFACE contrib/Catch/single_include)
 

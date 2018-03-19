@@ -12,7 +12,7 @@ branches:
 matrix:
   include:
     - os: linux
-      env: MATRIX_EVAL="COMPILER_NAME=gcc && CXX=g++-7 && CC=gcc-7"
+      env: MATRIX_EVAL="COMPILER_NAME=gcc COMPILER_VERSION=7 && CXX=g++-7 && CC=gcc-7"
       addons:
         apt:
           sources:
@@ -23,7 +23,7 @@ matrix:
             - cmake-data
             - cmake
     - os: linux
-      env: MATRIX_EVAL="COMPILER_NAME=clang && CXX=clang++-6.0 && CC=clang-6.0"
+      env: MATRIX_EVAL="COMPILER_NAME=clang && COMPILER_VERSION=6.0 && CXX=clang++-6.0 && CC=clang-6.0"
       addons:
         apt:
           sources:
@@ -39,12 +39,8 @@ before_install:
   - eval "${MATRIX_EVAL}"
 
 install:
-  - wget --no-verbose --output-document=boost-trunk.tar.bz2 http://sourceforge.net/projects/boost/files/boost/1.61.0/boost_1_61_0.tar.bz2/download
-  - export BOOST_ROOT="$TRAVIS_BUILD_DIR/../boost"
-  - export CMAKE_MODULE_PATH="$BOOST_ROOT"
-  - mkdir -p $BOOST_ROOT
-  - tar jxf boost-trunk.tar.bz2 --strip-components=1 -C $BOOST_ROOT
-
+  - pip install conan
+  - conan install . -build missing
 
 script:
   - mkdir build && cd build && cmake .. && cmake --build . && ctest

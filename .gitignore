@@ -2,3 +2,5 @@ build/
 .idea
 .vscode
 core/src/@/
+conanfile.txt
+conanbuildinfo.*

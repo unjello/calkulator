@@ -1,0 +1,39 @@
+[settings]
+    arch=x86_64
+    build_type=Release
+    compiler=gcc
+    compiler.libcxx=libstdc++
+    compiler.version=7
+    os=Macos
+
+[requires]
+    Catch/1.Y.Z
+    boost_multiprecision/1.Y.Z
+    spdlog/0.16.3
+
+[options]
+
+
+[full_settings]
+    arch=x86_64
+    arch_build=x86_64
+    build_type=Release
+    compiler=gcc
+    compiler.libcxx=libstdc++
+    compiler.version=7
+    os=Macos
+    os_build=Macos
+
+[full_requires]
+    Catch/1.9.6@bincrafters/stable:5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9
+    boost_multiprecision/1.66.0@bincrafters/stable:5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9
+    spdlog/0.16.3@bincrafters/stable:5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9
+
+[full_options]
+    spdlog:fmt_external=True
+
+[recipe_hash]
+
+
+[env]
+
