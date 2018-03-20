@@ -41,8 +41,9 @@ before_install:
 install:
   - pip install requests[security] --user
   - pip install conan --user
+  - mkdir -p ~/.conan && cp settings.yml ~/.conan/settings.yml
   - conan remote add bincrafters https://api.bintray.com/conan/bincrafters/public-conan
-  - conan install . --build missing -s compiler=$COMPILER_NAME -s compiler.version=$COMPILER_VERSION
+  - conan install . --build missing
 
 script:
   - mkdir build && cd build && cmake .. && cmake --build . && ctest
