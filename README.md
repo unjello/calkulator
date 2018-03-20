@@ -12,7 +12,6 @@
 
 [![Build Status: Master](https://travis-ci.org/unjello/calkulator.svg?branch=master)](https://travis-ci.org/unjello/calkulator)
 [![Build Status: Develop](https://travis-ci.org/unjello/calkulator.svg?branch=develop)](https://travis-ci.org/unjello/calkulator)
-[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/unjello/calkulator/master/Licence.txt)
 
 
 # [tested on animals]
